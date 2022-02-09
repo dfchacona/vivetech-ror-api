@@ -1,7 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Clean DB
+Product.destroy_all
+Variant.destroy_all
+
+# Add records
+product_list = [
+  [ "Zapatos", "Prenda para los pies" ],
+  [ "Papa", "Tuberculo" ]
+]
+
+product_list.each do |name, description|
+  Product.create( name: name, description: description )
+end
+
+# variant_list = [
+#   [ "Tenis", 99.99, 1 ],
+#   [ "Sandalias", 29.99, 1 ],
+#   [ "Pastusa", 10, 2 ],
+#   [ "Criolla", 5, 2 ],
+# ]
+
+# variant_list.each do |name, price, product_id|
+#   Variant.create( name: name, description: description )
+# end
