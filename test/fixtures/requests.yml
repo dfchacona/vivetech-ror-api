@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_requested: 1
+  number_accepted: 1
+  number_rejected: 1
+
+two:
+  number_requested: 1
+  number_accepted: 1
+  number_rejected: 1
