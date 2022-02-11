@@ -29,4 +29,8 @@ class Product < ApplicationRecord
     end
     successful_products
   end
+
+  def self.update_product(product)
+    #TODO: What if product exists?
+  end
 end
