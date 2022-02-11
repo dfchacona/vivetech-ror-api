@@ -16,7 +16,7 @@ variant_list = [
   [ "Tenis", 99.99, 1 ],
   [ "Sandalias", 29.99, 1 ],
   [ "Pastusa", 10, 2 ],
-  [ "Criolla", 5, 2 ],
+  [ "Criolla", 5, 2 ]
 ]
 
 variant_list.each do |name, price, product_id|

@@ -6,18 +6,8 @@ class RequestsController < ApplicationController
   end
 
   def read_stats
-    stats = []
+    total_stats = Request.get_total_stats()
 
-    total_requested = Request.sum(:number_requested)
-    total_accepted = Request.sum(:number_accepted)
-    total_rejected = Request.sum(:number_rejected)
-
-    stats << {
-      total_requested: total_requested,
-      total_accepted: total_accepted,
-      total_rejected: total_rejected
-    }
-
-    render status: 200, json: stats
+    render status: 200, json: total_stats
   end
 end
