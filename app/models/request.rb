@@ -1,4 +1,5 @@
 class Request < ApplicationRecord
+  # This function creates and returns a Request record using total_requested - total_accepted 
   def self.create_request(total_requested, total_accepted)
     total_rejected = total_requested - total_accepted
     request = Request.new(number_requested: total_requested, number_accepted: total_accepted, number_rejected: total_rejected)
