@@ -4,6 +4,8 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
 
+  # This function recieves the product list and creates them along with the variants
+  # it returns the number of products that meet the requirements and were added to the db 
   def self.create_products(products)
     successful_products = 0
     products.each do |new_product|
@@ -25,7 +27,4 @@ class Product < ApplicationRecord
     successful_products
   end
 
-  def self.update_product(product)
-    #TODO: What if product exists?
-  end
 end

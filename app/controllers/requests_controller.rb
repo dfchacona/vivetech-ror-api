@@ -1,10 +1,5 @@
 class RequestsController < ApplicationController
-  def read_all
-    requests = Request.all
-
-    render status: 200, json: requests
-  end
-
+  #This controller returns the total submitted / accepted / denied products. 
   def read_stats
     total_stats = Request.get_total_stats()
 

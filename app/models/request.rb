@@ -6,6 +6,7 @@ class Request < ApplicationRecord
     request
   end
 
+  # This function returns the sum of the submitted / accepted / denied products.
   def self.get_total_stats
     total_requested = Request.sum(:number_requested)
     total_accepted = Request.sum(:number_accepted)

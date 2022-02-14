@@ -1,17 +1,22 @@
 class ProductsController < ApplicationController
 
+  # This controller returns all products
   def read_all
     products = Product.all
 
     render status: 200, json: products
   end
 
+  # This controller returns the product with ID = /:id 
   def read
     product = Product.where(id: params[:id])
 
     render status: 200, json: product, include: [:variants]
   end
 
+  # This controller creates the product(s) in the body of the request
+  # and also creates a record that stores the number of accepted/denied products
+  # it returns the information of the created request 
   def create
     product_list = product_params[:_json]
     total_products = product_list.length()
