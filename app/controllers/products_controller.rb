@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   end
 
   private
-
+    #Param whitelisting
     def product_params
       params.permit(:id, _json: [:name, :description, variants: [ :name, :price ]])
     end
