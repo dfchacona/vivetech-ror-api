@@ -1,6 +1,7 @@
 # Clean DB
 Variant.destroy_all
 Product.destroy_all
+Request.destroy_all
 
 # Add records
 product_list = [
@@ -15,6 +16,7 @@ end
 variant_list = [
   [ "Tenis", 99.99, 1 ],
   [ "Sandalias", 29.99, 1 ],
+  [ "Botas", 59.99, 1 ],
   [ "Pastusa", 10, 2 ],
   [ "Criolla", 5, 2 ]
 ]
